@@ -1,0 +1,29 @@
+{
+  "1001684152963317832": {
+    "nome": "andre",
+    "cla": "uzumaki",
+    "idade": "60",
+    "elementos": "suiton",
+    "kekkei": "Nenhuma",
+    "maestrias": "Ninjutus",
+    "imagem": "https://i.pinimg.com/736x/0c/21/39/0c21399b4b1c43d071741dbf8228a79e.jpg",
+    "vidaAtual": 150,
+    "vidaMaxima": 150,
+    "chakraAtual": 200,
+    "chakraMaxima": 200,
+    "ryos": 0,
+    "forca": 1,
+    "agilidade": 1,
+    "defesa": 1,
+    "jutsusAprendidos": {
+      "katon": [],
+      "fuuton": [],
+      "doton": [],
+      "raiton": [],
+      "suiton": [
+        "daibakusui"
+      ],
+      "outros": []
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "raikyuu": {
+    "nome": "Raiton: Raikyū (Bola de Raio)",
+    "rank": "D",
+    "dano": 15,
+    "custoChakra": 10,
+    "descricao": "Cria uma esfera de energia elétrica que é atirada no inimigo, causando choque e paralisia leve.",
+    "imagem": "https://media1.tenor.com/m/Zf2q39p1P6gAAAAd/naruto-sasuke.gif"
+  },
+  "jibashi": {
+    "nome": "Raiton: Jibashi (Assassinato Eletromagnético)",
+    "rank": "C",
+    "dano": 30,
+    "custoChakra": 20,
+    "descricao": "Dispara ondas de eletricidade pelas mãos que podem viajar pelo solo ou pela água para atingir o alvo.",
+    "imagem": "https://media1.tenor.com/m/D9x_rL08YRsAAAAd/sasuke-uchiha-fire-style.gif"
+  },
+  "rairyudan": {
+    "nome": "Raiton: Rairyūdan (Dragão de Raio)",
+    "rank": "B",
+    "dano": 65,
+    "custoChakra": 45,
+    "descricao": "Cria um grande dragão feito inteiramente de eletricidade que persegue e morde o oponente.",
+    "imagem": "https://media1.tenor.com/m/Zf2q39p1P6gAAAAd/naruto-sasuke.gif"
+  },
+  "chidori": {
+    "nome": "Raiton: Chidori (Mil Pássaros)",
+    "rank": "A",
+    "dano": 100,
+    "custoChakra": 70,
+    "descricao": "Concentra uma quantidade imensa de chakra de raio na mão, criando uma lâmina elétrica capaz de perfurar quase qualquer coisa.",
+    "imagem": "https://media1.tenor.com/m/D9x_rL08YRsAAAAd/sasuke-uchiha-fire-style.gif"
+  },
+  "kirin": {
+    "nome": "Raiton: Kirin",
+    "rank": "S",
+    "dano": 200,
+    "custoChakra": 130,
+    "descricao": "Puxa os raios naturais das nuvens para formar uma criatura mítica de eletricidade, caindo na velocidade da luz e destruindo a área inteira.",
+    "imagem": "https://media1.tenor.com/m/Zf2q39p1P6gAAAAd/naruto-sasuke.gif"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "mizurappa": {
+    "nome": "Suiton: Mizurappa (Chifre de Água)",
+    "rank": "D",
+    "dano": 15,
+    "custoChakra": 10,
+    "descricao": "Lança um forte jato de água da boca como se fosse um projétil.",
+    "imagem": "https://media1.tenor.com/m/Zf2q39p1P6gAAAAd/naruto-sasuke.gif"
+  },
+  "suigadan": {
+    "nome": "Suiton: Suigadan (Broca de Água)",
+    "rank": "C",
+    "dano": 35,
+    "custoChakra": 20,
+    "descricao": "Cria múltiplos redemoinhos de água afiados que atacam o inimigo por baixo.",
+    "imagem": "https://media1.tenor.com/m/D9x_rL08YRsAAAAd/sasuke-uchiha-fire-style.gif"
+  },
+  "suiryudan": {
+    "nome": "Suiton: Suiryūdan no Jutsu (Dragão de Água)",
+    "rank": "B",
+    "dano": 65,
+    "custoChakra": 45,
+    "descricao": "Moldura uma quantidade massiva de água na forma de um dragão gigante que esmaga o alvo.",
+    "imagem": "https://media1.tenor.com/m/Zf2q39p1P6gAAAAd/naruto-sasuke.gif"
+  },
+  "daibakufu": {
+    "nome": "Suiton: Daibakufu no Jutsu (Grande Cachoeira)",
+    "rank": "A",
+    "dano": 95,
+    "custoChakra": 70,
+                "descricao": "Gera uma onda gigantesca comparável a uma cachoeira que arrasta tudo no campo de batalha.",
+    "imagem": "https://media1.tenor.com/m/D9x_rL08YRsAAAAd/sasuke-uchiha-fire-style.gif"
+  },
+  "daibakusui": {
+    "nome": "Suiton: Daibakusui Shōha (Grande Onda de Choque)",
+    "rank": "S",
+    "dano": 180,
+    "custoChakra": 110,
+    "descricao": "Cospe uma quantidade absurda de água, criando um verdadeiro oceano artificial para afogar o oponente.",
+    "imagem": "https://media1.tenor.com/m/Zf2q39p1P6gAAAAd/naruto-sasuke.gif"
+  }
+}

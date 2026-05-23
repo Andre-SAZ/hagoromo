@@ -1,0 +1,18 @@
+{
+  "goukakyuu": {
+    "nome": "Katon: Gōkakyū no Jutsu",
+    "rank": "C",
+    "dano": 30,
+    "custoChakra": 15,
+    "descricao": "O usuário amassa o chakra dentro do corpo, transformando-o em fogo, e o expulsa da boca como uma esfera massiva.",
+    "imagem": "https://i.pinimg.com/736x/d6/66/a8/d666a846e58ec1b64694c2dd8874b342.jpg"
+  },
+  "housenka": {
+    "nome": "Katon: Hōsenka no Jutsu",
+    "rank": "C",
+    "dano": 20,
+    "custoChakra": 10,
+    "descricao": "Dispara várias pequenas bolas de fogo em direções diferentes, ótimo para enganar o inimigo.",
+    "imagem": "https://i.pinimg.com/736x/1a/b7/19/1ab719a5af1f6387eacc5e8a26ae5a52.jpg"
+  }
+}

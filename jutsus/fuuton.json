@@ -1,0 +1,42 @@
+{
+  "kamaitachi": {
+    "nome": "Fuuton: Kamaitachi no Jutsu",
+    "rank": "D",
+    "dano": 20,
+    "custoChakra": 10,
+    "descricao": "Cria uma rajada de vento cortante que atinge o inimigo.",
+    "imagem": "https://media1.tenor.com/m/Zf2q39p1P6gAAAAd/naruto-sasuke.gif"
+  },
+  "daitoppa": {
+    "nome": "Fuuton: Daitoppa",
+    "rank": "C",
+    "dano": 35,
+    "custoChakra": 20,
+    "descricao": "Um sopro poderoso de vento capaz de derrubar árvores e limpar a área.",
+    "imagem": "https://media1.tenor.com/m/D9x_rL08YRsAAAAd/sasuke-uchiha-fire-style.gif"
+  },
+  "shinkuugyoku": {
+    "nome": "Fuuton: Shinkūgyoku",
+    "rank": "B",
+    "dano": 60,
+    "custoChakra": 40,
+    "descricao": "Dispara balas de vento condensado pela boca, rápidas como tiros.",
+    "imagem": "https://media1.tenor.com/m/Zf2q39p1P6gAAAAd/naruto-sasuke.gif"
+  },
+  "atsugai": {
+    "nome": "Fuuton: Atsugai",
+    "rank": "A",
+    "dano": 90,
+    "custoChakra": 60,
+    "descricao": "Um tornado altamente destrutivo e comprimido que varre tudo ao redor.",
+    "imagem": "https://media1.tenor.com/m/D9x_rL08YRsAAAAd/sasuke-uchiha-fire-style.gif"
+  },
+  "rasenshuriken": {
+    "nome": "Fuuton: Rasenshuriken",
+    "rank": "S",
+    "dano": 200,
+    "custoChakra": 120,
+    "descricao": "Uma shuriken gigante de chakra de vento que ataca a nível celular.",
+    "imagem": "https://media1.tenor.com/m/Zf2q39p1P6gAAAAd/naruto-sasuke.gif"
+  }
+}

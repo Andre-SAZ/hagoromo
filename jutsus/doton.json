@@ -1,0 +1,42 @@
+{
+  "moguragakure": {
+    "nome": "Doton: Moguragakure no Jutsu (Técnica da Toupeira)",
+    "rank": "D",
+    "dano": 10,
+    "custoChakra": 10,
+    "descricao": "Transforma a terra em areia fina, permitindo que o usuário cave e se mova rapidamente debaixo do solo.",
+    "imagem": "https://media1.tenor.com/m/Zf2q39p1P6gAAAAd/naruto-sasuke.gif"
+  },
+  "doryuuhei": {
+    "nome": "Doton: Doryūheki (Parede de Estilo Terra)",
+    "rank": "C",
+    "dano": 25,
+    "custoChakra": 20,
+    "descricao": "O usuário cospe lama que instantaneamente se solidifica criando uma imensa parede de rocha para defesa e ataque.",
+    "imagem": "https://media1.tenor.com/m/D9x_rL08YRsAAAAd/sasuke-uchiha-fire-style.gif"
+  },
+  "doryuudan": {
+    "nome": "Doton: Doryūdan (Projéteis do Dragão de Terra)",
+    "rank": "B",
+    "dano": 60,
+    "custoChakra": 40,
+    "descricao": "Cria a cabeça de um dragão de lama que passa a disparar projéteis de pedra altamente compactados contra o oponente.",
+    "imagem": "https://media1.tenor.com/m/Zf2q39p1P6gAAAAd/naruto-sasuke.gif"
+  },
+  "yominonuma": {
+    "nome": "Doton: Yomi no Numa (Pântano do Submundo)",
+    "rank": "A",
+    "dano": 95,
+    "custoChakra": 75,
+    "descricao": "Transforma uma grande área de solo sólido em um pântano de lama viscosa que prende, afunda e esmaga o alvo.",
+    "imagem": "https://media1.tenor.com/m/D9x_rL08YRsAAAAd/sasuke-uchiha-fire-style.gif"
+  },
+  "golem": {
+    "nome": "Doton: Gōremu no Jutsu (Técnica do Golem)",
+    "rank": "S",
+    "dano": 190,
+    "custoChakra": 120,
+    "descricao": "Expele uma criatura humanoide gigantesca feita de rocha pura e sólida, capaz de desferir socos devastadores.",
+    "imagem": "https://media1.tenor.com/m/Zf2q39p1P6gAAAAd/naruto-sasuke.gif"
+  }
+}
