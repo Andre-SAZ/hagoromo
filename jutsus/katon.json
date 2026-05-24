@@ -1,7 +1,7 @@
 {
   "goukakyuu": {
     "nome": "Katon: Gōkakyū no Jutsu",
-    "rank": "C",
+    "rank": "E",
     "dano": 30,
     "custoChakra": 15,
     "descricao": "O usuário amassa o chakra dentro do corpo, transformando-o em fogo, e o expulsa da boca como uma esfera massiva.",
@@ -14,5 +14,45 @@
     "custoChakra": 10,
     "descricao": "Dispara várias pequenas bolas de fogo em direções diferentes, ótimo para enganar o inimigo.",
     "imagem": "https://i.pinimg.com/736x/1a/b7/19/1ab719a5af1f6387eacc5e8a26ae5a52.jpg"
+  },
+  "endan": {
+    "nome": "Katon: Endan",
+    "rank": "Rank D",
+    "dano": 15,
+    "custoChakra": 8,
+    "descricao": "O usuário cospe um jato rápido e direto de fogo no inimigo. É uma técnica simples, rápida e ótima para ataques curtos.",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/8/8d/Libera%C3%A7%C3%A3o_de_Fogo_-_Proj%C3%A9til_de_Chamas_%28Koji_-_Mang%C3%A1%29.png/revision/latest?cb=20200522185222&path-prefix=pt-br"
+  },
+  "ryuuka": {
+    "nome": "Katon: Ryūka no Jutsu",
+    "rank": "Rank C",
+    "dano": 35,
+    "custoChakra": 20,
+    "descricao": "O fogo é disparado em uma linha reta, geralmente viajando através de um fio para atingir o alvo de forma certeira.",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/3/31/T%C3%A9cnica_do_Drag%C3%A3o_de_Fogo_de_Sasuke_%28Mang%C3%A1_Colorido%29.png/revision/latest?cb=20151103161626&path-prefix=pt-br"
+  },
+  "haisekisho": {
+    "nome": "Katon: Haisekishō",
+    "rank": "Rank B",
+    "dano": 55,
+    "custoChakra": 35,
+    "descricao": "O usuário solta uma nuvem de cinzas e pólvora que cobre o inimigo. Depois, morde os dentes para criar uma faísca e explodir tudo.",
+    "imagem": "https://i.pinimg.com/originals/fe/fd/0f/fefd0f65c5950108a74ecc3d53bd6939.gif"
+  },
+  "goryuuka": {
+    "nome": "Katon: Gōryūka no Jutsu",
+    "rank": "Rank B",
+    "dano": 60,
+    "custoChakra": 40,
+    "descricao": "Cospe chamas gigantes no formato da cabeça de um dragão. O calor é tão forte que pode criar correntes de ar quente no céu.",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/0/0c/Katon_Grande_Drag%C3%A3o_de_Fogo_Sasuke_Mang%C3%A1.png/revision/latest?cb=20160116003348&path-prefix=pt-br"
+  },
+  "gokamekkyaku": {
+    "nome": "Katon: Gōka Mekkyaku",
+    "rank": "Rank A",
+    "dano": 90,
+    "custoChakra": 65,
+    "descricao": "Cria uma parede gigante e destruidora de fogo, como um tsunami de chamas. É muito difícil de desviar ou defender sozinho.",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/9/9c/Libera%C3%A7%C3%A3o_de_Fogo_Grande_Aniquila%C3%A7%C3%A3o_de_Fogo_Mang%C3%A1_Colorido.png/revision/latest?cb=20160108054254&path-prefix=pt-br"
   }
 }

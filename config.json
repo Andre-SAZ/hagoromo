@@ -1,0 +1,134 @@
+{
+  "cargos": {
+    "katon": "1507646623247896687",
+    "suiton": "1507646666596024451",
+    "fuuton": "1507646727380013056",
+    "doton": "1507646759210582016",
+    "raiton": "1507646809810538637",
+    "estudante": "1507808363231314060"
+  },
+  "nomesExibicao": {
+    "katon": "🔥 Katon",
+    "suiton": "💧 Suiton",
+    "fuuton": "🌪️ Fuuton",
+    "doton": "🪨 Doton",
+    "raiton": "⚡ Raiton"
+  },
+  "cores": {
+    "katon": "#FF0000",
+    "suiton": "#00BFFF",
+    "fuuton": "#00FF7F",
+    "doton": "#8B4513",
+    "raiton": "#FFD700"
+  },
+  "emojis": {
+    "katon": "🔥",
+    "suiton": "💧",
+    "fuuton": "🌪️",
+    "doton": "🪨",
+    "raiton": "⚡"
+  },
+  "cargosOrganizados": {
+    "patentes": {
+      "Estudante": "1507808363231314060",
+      "Genin": "1507818788329095340",
+      "Chuunin": "1507818789507432480",
+      "TokubetsuJounin": "1507818791034421339",
+      "Jounin": "1507818792200310935",
+      "ANBU": "1507818793345486908",
+      "Kage": "1507818794603511828",
+      "Nukenin": "1507818795853545543",
+      "Mercenario": "1507818797539528847"
+    },
+    "clas": {
+      "ClaInuzuka": "1507811448057892959",
+      "ClaNara": "1507811453384790146",
+      "ClaHyuuga": "1507811447202254848",
+      "ClaAburame": "1507811435215061133",
+      "ClaYamanaka": "1507811462163468401",
+      "ClaHoozuki": "1507811444119568424",
+      "LinhagemdeGuardioes": "1507811466336669727",
+      "ClaLee": "1507811451828437034",
+      "ClaUchiha": "1507811458967273472",
+      "ClaIzuno": "1507811449630756864",
+      "ClaHoshigaki": "1507811445381796000",
+      "ClaHatake": "1507811442714345553",
+      "ClaJuugo": "1507811439040004238",
+      "ClaUzumaki": "1507811461202710749",
+      "ClaShimura": "1507811457511981267",
+      "ClaKazekage": "1507811440537637125",
+      "ClaAkimichi": "1507811436393398514",
+      "ClaChinoike": "1507811437815533722",
+      "FamiliadosB": "1507811465288220782",
+      "ClaSenju": "1507811456286982277",
+      "ClaKaguya": "1507811450780123236",
+      "ClaSarutobi": "1507811455041536010",
+      "ClaYuki": "1507811464147111937",
+      "ClaRaikage": "1507811441636409374"
+    },
+    "elementos": {
+      "Raiton": "1507646809810538637",
+      "Fuuton": "1507646727380013056",
+      "Katon": "1507646623247896687",
+      "Suiton": "1507646666596024451",
+      "Doton": "1507646759210582016"
+    },
+    "maestrias": {
+      "MaestriaemNintaijutsu": "1507814919028867182",
+      "MaestriaemNinjutsuMedico": "1507814917850267781",
+      "MaestriaemNinjutsuEspacoTempo": "1507814916084465798",
+      "MaestriaemShurikenjutsu": "1507814922887888956",
+      "MaestriaemKenjutsu": "1507814912049545326",
+      "MaestriaemBunshinjutsu": "1507814901870100592",
+      "MaestriaemFuuinjutsu": "1507814904307126282",
+      "MaestriaemTaijutsu": "1507814900792037467",
+      "MaestriaemSenjutsu": "1507814920576569384",
+      "MaestriaemJuinjutsu": "1507814907591004180",
+      "MaestriaemHiden": "1507814905133404181",
+      "MaestriaemJujutsu": "1507814909830758440",
+      "MaestriaemKyuuinjutsu": "1507814915388346509",
+      "MaestriaemFluxodeChakra": "1507814902994173952",
+      "MaestriaemTenseijutsu": "1507814923957305514",
+      "MaestriaemGenjutsu": "1507814899273826404",
+      "MaestriaemNinjutsu": "1507814897973465090",
+      "MaestriaemKekkaijutsu": "1507814910719951070",
+      "MaestriaemKinjutsu": "1507814913127616712",
+      "MaestriaemKonbijutsu": "1507814914373320724"
+    },
+    "doujutsus": {
+      "Byakugan": "1507818821195403325",
+      "Tenseigan": "1507818822353027082",
+      "Kokugan": "1507818823544340730",
+      "Jougan": "1507818824450310176",
+      "Rinnegan": "1507818827054841926",
+      "RinneganSupremo": "1507818828141170769",
+      "RinneSharingan": "1507818829185548338",
+      "Sharingan": "1507818830448296110",
+      "MangekyouSharingan": "1507818831572107354",
+      "Senrigan": "1507818832855826652",
+      "DojutsuImplantado": "1507818834281631794"
+    },
+    "kekkeigenkai": {
+      "EstiloCalor": "1507818799041089637",
+      "EstiloChama": "1507818800202911855",
+      "EstiloCristal": "1507818801314664549",
+      "EstiloDissolucao": "1507818802614894673",
+      "EstiloEbulicao": "1507818803793494278",
+      "EstiloEspuma": "1507818805072625735",
+      "EstiloExplosao": "1507818806364340416",
+      "EstiloFusao": "1507818807450664992",
+      "EstiloGelo": "1507818808566612069",
+      "EstiloLama": "1507818810101731350",
+      "EstiloMadeira": "1507818811254898790",
+      "EstiloMagnetismoOuro": "1507818812181839872",
+      "EstiloMagnetismoFerro": "1507818813281009775",
+      "EstiloMagnetismoAreia": "1507818814828707961",
+      "EstiloTempestade": "1507818817227853975",
+      "EstiloTufao": "1507818818746192053",
+      "EstiloPo": "1507818820126117939"
+    },
+    "outros": {
+      "Hagoromo": "1507617402500808918"
+    }
+  }
+}

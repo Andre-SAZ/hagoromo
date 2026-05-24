@@ -5,7 +5,7 @@
     "dano": 10,
     "custoChakra": 10,
     "descricao": "Transforma a terra em areia fina, permitindo que o usuário cave e se mova rapidamente debaixo do solo.",
-    "imagem": "https://media1.tenor.com/m/Zf2q39p1P6gAAAAd/naruto-sasuke.gif"
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/3/33/Esconder-se_Como_uma_Toupeira_de_Deidara_%28Mang%C3%A1%29.png/revision/latest?cb=20160504231254&path-prefix=pt-br"
   },
   "doryuuhei": {
     "nome": "Doton: Doryūheki (Parede de Estilo Terra)",
@@ -13,7 +13,7 @@
     "dano": 25,
     "custoChakra": 20,
     "descricao": "O usuário cospe lama que instantaneamente se solidifica criando uma imensa parede de rocha para defesa e ataque.",
-    "imagem": "https://media1.tenor.com/m/D9x_rL08YRsAAAAd/sasuke-uchiha-fire-style.gif"
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/7/7e/Parede_de_Terra_de_Hiruzen_vs._Drag%C3%A3o_de_%C3%81gua_de_Tobirama_%28Mang%C3%A1%29.png/revision/latest?cb=20160522000701&path-prefix=pt-br"
   },
   "doryuudan": {
     "nome": "Doton: Doryūdan (Projéteis do Dragão de Terra)",
@@ -21,7 +21,7 @@
     "dano": 60,
     "custoChakra": 40,
     "descricao": "Cria a cabeça de um dragão de lama que passa a disparar projéteis de pedra altamente compactados contra o oponente.",
-    "imagem": "https://media1.tenor.com/m/Zf2q39p1P6gAAAAd/naruto-sasuke.gif"
+    "imagem": "https://i.pinimg.com/originals/24/76/7c/24767c25438a84fc56b64297cab008ff.gif"
   },
   "yominonuma": {
     "nome": "Doton: Yomi no Numa (Pântano do Submundo)",
@@ -29,7 +29,7 @@
     "dano": 95,
     "custoChakra": 75,
     "descricao": "Transforma uma grande área de solo sólido em um pântano de lama viscosa que prende, afunda e esmaga o alvo.",
-    "imagem": "https://media1.tenor.com/m/D9x_rL08YRsAAAAd/sasuke-uchiha-fire-style.gif"
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/2/26/P%C3%A2ntano_do_Submundo_%28Mang%C3%A1%29.png/revision/latest?cb=20160521234852&path-prefix=pt-br"
   },
   "golem": {
     "nome": "Doton: Gōremu no Jutsu (Técnica do Golem)",
@@ -37,6 +37,6 @@
     "dano": 190,
     "custoChakra": 120,
     "descricao": "Expele uma criatura humanoide gigantesca feita de rocha pura e sólida, capaz de desferir socos devastadores.",
-    "imagem": "https://media1.tenor.com/m/Zf2q39p1P6gAAAAd/naruto-sasuke.gif"
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/8/80/Golem_de_%C5%8Cnoki_%28Mang%C3%A1%29.png/revision/latest?cb=20160513210719&path-prefix=pt-br"
   }
 }

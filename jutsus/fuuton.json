@@ -5,7 +5,7 @@
     "dano": 20,
     "custoChakra": 10,
     "descricao": "Cria uma rajada de vento cortante que atinge o inimigo.",
-    "imagem": "https://media1.tenor.com/m/Zf2q39p1P6gAAAAd/naruto-sasuke.gif"
+    "imagem": "https://i.pinimg.com/736x/e1/68/bb/e168bbea20ce6469daa4818b5cbfbafe.jpg"
   },
   "daitoppa": {
     "nome": "Fuuton: Daitoppa",
@@ -13,7 +13,7 @@
     "dano": 35,
     "custoChakra": 20,
     "descricao": "Um sopro poderoso de vento capaz de derrubar árvores e limpar a área.",
-    "imagem": "https://media1.tenor.com/m/D9x_rL08YRsAAAAd/sasuke-uchiha-fire-style.gif"
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/c/c7/Estilo_Vento_-_Daitoppa.png/revision/latest?cb=20251227141728&path-prefix=pt-br"
   },
   "shinkuugyoku": {
     "nome": "Fuuton: Shinkūgyoku",
@@ -21,7 +21,7 @@
     "dano": 60,
     "custoChakra": 40,
     "descricao": "Dispara balas de vento condensado pela boca, rápidas como tiros.",
-    "imagem": "https://media1.tenor.com/m/Zf2q39p1P6gAAAAd/naruto-sasuke.gif"
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/8/87/Esfera_de_V%C3%A1cuo_%28Mang%C3%A1_Colorido%29.png/revision/latest?cb=20160810173333&path-prefix=pt-br"
   },
   "atsugai": {
     "nome": "Fuuton: Atsugai",

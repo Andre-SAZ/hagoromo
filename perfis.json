@@ -1,16 +1,16 @@
 {
-  "1001684152963317832": {
-    "nome": "andre",
-    "cla": "uzumaki",
-    "idade": "60",
-    "elementos": "suiton",
+  "449374091254956062": {
+    "nome": "Bispo",
+    "cla": "Namikaze",
+    "idade": "13",
+    "elementos": "raiton",
     "kekkei": "Nenhuma",
-    "maestrias": "Ninjutus",
-    "imagem": "https://i.pinimg.com/736x/0c/21/39/0c21399b4b1c43d071741dbf8228a79e.jpg",
-    "vidaAtual": 150,
-    "vidaMaxima": 150,
-    "chakraAtual": 200,
-    "chakraMaxima": 200,
+    "maestrias": "Ninjutsu e Taijustu",
+    "imagem": "https://pin.it/5XSR81kMg",
+    "vidaAtual": 100,
+    "vidaMaxima": 100,
+    "chakraAtual": 100,
+    "chakraMaxima": 100,
     "ryos": 0,
     "forca": 1,
     "agilidade": 1,
@@ -20,10 +20,58 @@
       "fuuton": [],
       "doton": [],
       "raiton": [],
-      "suiton": [
-        "daibakusui"
-      ],
+      "suiton": [],
       "outros": []
+    }
+  },
+  "1001684152963317832": {
+    "nome": "Deco",
+    "cla": "Clã Hyuuga",
+    "idade": "15",
+    "rank": "Rank E",
+    "elementos": "katon",
+    "kekkei": "Nenhuma",
+    "doujutsu": "Nenhum",
+    "imagem": "https://i.pinimg.com/1200x/58/7c/bf/587cbf961fea2d939db1bd27de040a8c.jpg",
+    "vidaAtual": 100,
+    "vidaMaxima": 100,
+    "chakraAtual": 100,
+    "chakraMaxima": 100,
+    "ryos": 0,
+    "forca": 1,
+    "agilidade": 1,
+    "defesa": 1,
+    "jutsusAprendidos": {
+      "katon": [
+        "goukakyuu"
+      ],
+      "fuuton": [],
+      "doton": [],
+      "raiton": [],
+      "suiton": [],
+      "outros": []
+    },
+    "maestrias": {
+      "ninjutsu": 0,
+      "genjutsu": 0,
+      "taijutsu": 0,
+      "bunshinjutsu": 0,
+      "fluxoDeChakra": 0,
+      "fuuinjutsu": 0,
+      "hiden": 0,
+      "juinjutsu": 0,
+      "jujutsu": 0,
+      "kekkaijutsu": 0,
+      "kenjutsu": 0,
+      "kinjutsu": 0,
+      "konbijutsu": 0,
+      "kyuuinjutsu": 0,
+      "ninjutsuEspacoTempo": 0,
+      "ninjutsuMedico": 0,
+      "nintaijutsu": 0,
+      "senjutsu": 0,
+      "shurikenjutsu": 0,
+      "tenseijutsu": 0
     }
   }
 }
