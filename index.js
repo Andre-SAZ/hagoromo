@@ -21,15 +21,23 @@ const client = new Client({
 client.commands = new Collection();
 
 // ==========================================
-// LENDO A PASTA 'commands'
+// LENDO AS SUBPASTAS DE COMANDOS
 // ==========================================
-// Lê todos os arquivos dentro de 'commands' que terminam em '.js'
-const arquivosComandos = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+// Lê tudo o que tem dentro da pasta 'commands' (que agora serão as subpastas)
+const pastasComandos = fs.readdirSync('./commands');
 
-// Salva cada comando na memória do bot
-for (const arquivo of arquivosComandos) {
-    const comando = require(`./commands/${arquivo}`);
-    client.commands.set(comando.nome, comando);
+for (const pasta of pastasComandos) {
+    const caminhoPasta = `./commands/${pasta}`;
+    
+    // Verifica se o item lido é realmente uma pasta
+    if (fs.lstatSync(caminhoPasta).isDirectory()) {
+        const arquivosComandos = fs.readdirSync(caminhoPasta).filter(file => file.endsWith('.js'));
+        
+        for (const arquivo of arquivosComandos) {
+            const comando = require(`./commands/${pasta}/${arquivo}`);
+            client.commands.set(comando.nome, comando);
+        }
+    }
 }
 
 // ==========================================

@@ -1,7 +1,7 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ComponentType } = require('discord.js');
 const fs = require('fs');
-const banco = require('../banco.js');
-const config = require('../config.json');
+const banco = require('../../banco.js');
+const config = require('../../config.json');
 
 module.exports = {
     nome: '!treino',

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { EmbedBuilder } = require('discord.js');
-const config = require('../config.json');
-const banco = require('../banco.js');
+const config = require('../../config.json');
+const banco = require('../../banco.js');
 
 module.exports = {
     nome: '!sobrenos',

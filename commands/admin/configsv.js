@@ -1,5 +1,5 @@
 const { PermissionsBitField } = require('discord.js');
-const dadosRPG = require('./dadosRPG.js'); // Usa ../ pois o arquivo deve estar na pasta raiz
+const dadosRPG = require('../../dadosRPG.js'); // Usa ../ pois o arquivo deve estar na pasta raiz
 
 const delay = (ms) => new Promise(res => setTimeout(res, ms));
 

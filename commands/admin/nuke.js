@@ -11,12 +11,12 @@ module.exports = {
 
         const args = message.content.trim().split(/ +/);
 
-        // Trava 2: Palavra-chave exata
+        // Trava 2: Palavra-chave exata (Aviso atualizado)
         if (args[1] !== 'confirmar_destruicao') {
-            return message.reply('⚠️ **ALERTA VERMELHO!** Este comando vai **APAGAR TODOS OS CARGOS** do Discord (abaixo do bot) e zerar o banco de dados do `config.json`. Se tem certeza absoluta, digite: `!nuke confirmar_destruicao`');
+            return message.reply('⚠️ **ALERTA VERMELHO MÁXIMO!** Este comando vai **APAGAR TODOS OS CARGOS** do Discord, zerar o banco de dados e **DELETAR TODAS AS FICHAS** dos jogadores. Não haverá volta. Se tem certeza absoluta, digite: `!nuke confirmar_destruicao`');
         }
 
-        const msgAviso = await message.reply('☢️ **INICIANDO PROTOCOLO NUCLEAR...** Deletando cargos do servidor. Isso pode demorar vários segundos devido aos limites do Discord. Por favor, aguarde.');
+        const msgAviso = await message.reply('☢️ **INICIANDO PROTOCOLO NUCLEAR TOTAL...** Deletando cargos e vaporizando registros shinobis. Por favor, aguarde.');
 
         try {
             await message.guild.roles.fetch();
@@ -28,7 +28,7 @@ module.exports = {
             for (const cargo of message.guild.roles.cache.values()) {
                 if (cargo.name === '@everyone') continue;
                 if (!cargo.editable) {
-                    falhas++; // Cargos de bots ou de admin acima do Hagoromo não podem ser apagados
+                    falhas++;
                     continue;
                 }
 
@@ -40,15 +40,13 @@ module.exports = {
                 }
             }
 
-            // Zerando as gavetas no config.json
+            // ==========================================
+            // DESTRUIÇÃO DO CONFIG.JSON
+            // ==========================================
             const caminhoConfig = './config.json';
             let config = { cores: {}, emojis: {}, cargos: {} };
 
-            if (fs.existsSync(caminhoConfig)) {
-                config = JSON.parse(fs.readFileSync(caminhoConfig, 'utf-8'));
-            }
-
-            // Esvazia totalmente as organizações
+            // Esvazia totalmente as organizações (incluindo a gaveta nova de estilosLuta)
             config.cargosOrganizados = {
                 patentes: {},
                 clas: {},
@@ -56,16 +54,22 @@ module.exports = {
                 maestrias: {},
                 doujutsus: {},
                 kekkeigenkai: {},
-                outros: {}
+                estilosLuta: {} 
             };
 
             fs.writeFileSync(caminhoConfig, JSON.stringify(config, null, 2));
 
-            await msgAviso.edit(`✅ **Wipe Concluído!** \n💥 **${deletados}** cargos foram pulverizados do Discord.\n🛡️ **${falhas}** cargos foram ignorados (cargos de bots ou com hierarquia superior).\n📂 O arquivo \`config.json\` foi completamente limpo.\n\nVocê já pode usar o \`!configsv\` para recriar o mundo do zero!`);
+            // ==========================================
+            // DESTRUIÇÃO DO PERFIS.JSON (WIPE DAS FICHAS)
+            // ==========================================
+            fs.writeFileSync('./perfis.json', JSON.stringify({}, null, 2));
+
+            // Relatório Final
+            await msgAviso.edit(`✅ **Wipe Total Concluído!** \n💥 **${deletados}** cargos foram pulverizados do Discord.\n🛡️ **${falhas}** cargos foram ignorados (cargos de bots ou com hierarquia superior).\n📂 O arquivo \`config.json\` foi completamente limpo.\n💀 **TODAS as fichas de jogadores (\`perfis.json\`) foram apagadas!**\n\nVocê já pode usar o \`!configsv\` para recriar o mundo do zero.`);
 
         } catch (erro) {
             console.error('Erro no protocolo nuclear:', erro);
-            message.channel.send('❌ Ocorreu um erro crítico durante a deleção em massa.');
+            message.reply('❌ Ocorreu um erro crítico durante o nuke.');
         }
     }
 };

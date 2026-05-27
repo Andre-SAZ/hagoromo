@@ -1,6 +1,6 @@
 const { PermissionsBitField } = require('discord.js');
 const fs = require('fs');
-const dadosRPG = require('./dadosRPG.js');
+const dadosRPG = require('../../dadosRPG.js');
 
 module.exports = {
     nome: '!configbot',

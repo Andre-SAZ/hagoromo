@@ -1,26 +1,31 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
-const banco = require('../banco.js');
+const banco = require('../../banco.js');
 
 module.exports = {
     nome: '!status',
 
     async executar(message) {
         const perfis = banco.ler();
-        const idUsuario = message.author.id;
+        
+        // Define de quem é o status: do membro mencionado OU de quem enviou o comando
+        const alvo = message.mentions.members.first() || message.member;
+        const idUsuario = alvo.id;
         const dados = perfis[idUsuario];
 
+        // Se o banco não achar a ficha
         if (!dados) {
-            return message.reply('❌ Você ainda não possui um perfil criado! Use `!novo` para começar sua história.');
+            // Verifica se a pessoa tentou ver o próprio status ou o de outro
+            if (idUsuario === message.author.id) {
+                return message.reply('❌ Você ainda não possui um perfil criado! Use `!novo` para começar sua história.');
+            } else {
+                return message.reply(`❌ O jogador **${alvo.user.username}** ainda não possui um perfil ninja criado.`);
+            }
         }
 
         // ==========================================
         // PÁGINA 1: INFORMAÇÕES PRINCIPAIS E ATRIBUTOS
         // ==========================================
-        // ==========================================
-        // PÁGINA 1: INFORMAÇÕES PRINCIPAIS E ATRIBUTOS
-        // ==========================================
         const gerarEmbedPagina1 = () => {
-            // Arruma o Caps Lock: Deixa só a primeira letra maiúscula (ex: "Fuuton")
             const exibicaoElementos = dados.elementos && dados.elementos.length > 0 
                 ? dados.elementos.map(e => e.charAt(0).toUpperCase() + e.slice(1).toLowerCase()).join(', ') 
                 : 'Nenhum';
@@ -33,7 +38,6 @@ module.exports = {
                     { name: '⛩️ Clã', value: `${dados.cla}`, inline: true },
                     { name: '📊 Rank', value: `\`${dados.rank || 'Rank E'}\``, inline: true },
                     { name: '🎂 Idade', value: `${dados.idade} anos`, inline: true },
-                    // Trocamos "Linhagem" por "Talento Inato" para não confundir com Kekkei Genkai
                     { name: '🌟 Talento Inato', value: dados.prodigio ? 'Prodígio' : 'Comum', inline: true },
                     { name: '🥋 Estilo de Luta', value: `${dados.estiloLuta || 'Básico'}`, inline: true },
                     { name: '💰 Ryōs', value: `💵 ${dados.ryos || 0}`, inline: true },
@@ -66,7 +70,6 @@ module.exports = {
 
             if (dados.maestrias) {
                 for (const [chave, nivel] of Object.entries(dados.maestrias)) {
-                    // Só vai listar o que a pessoa tiver upado
                     if (nivel > 0) {
                         const nomeFormatado = mapaNomesMaestrias[chave] || chave;
                         textoMaestrias.push(`• **${nomeFormatado}:** Nível \`${nivel}\``);
@@ -93,7 +96,7 @@ module.exports = {
         // Envia a mensagem inicial com a Página 1
         const msgStatus = await message.reply({ embeds: [gerarEmbedPagina1()], components: [botoesNav] });
 
-        // Coletor de interações por componentes
+        // Coletor de interações por componentes (Deixa APENAS quem enviou o comando clicar nos botões)
         const filter = (i) => i.user.id === message.author.id;
         const coletor = msgStatus.createMessageComponentCollector({ filter, time: 60000 }); // 60 segundos ativo
 
@@ -112,7 +115,6 @@ module.exports = {
                 new ButtonBuilder().setCustomId('status_pag2').setLabel('Maestrias').setStyle(ButtonStyle.Secondary).setDisabled(true)
             );
 
-            // Altera os botões da mensagem para o modo cinza/desativado
             msgStatus.edit({ components: [botoesDesativados] }).catch(() => {});
         });
     }
