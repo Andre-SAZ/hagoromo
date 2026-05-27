@@ -17,13 +17,22 @@ module.exports = {
         }
 
         // ==========================================
+        // TRAVA EXCLUSIVA: CLÃ LEE
+        // ==========================================
+        if (dados.cla === 'Clã Lee') {
+            if (args.length === 1 || args[1].toLowerCase() !== 'taijutsu') {
+                return message.reply('🥋 **O Poder da Juventude!** Ninjas do Clã Lee não conseguem moldar chakra para Ninjutsu ou Genjutsu. Você é proibido de aprender técnicas elementais e deve focar inteiramente no **Taijutsu**.');
+            }
+        }
+
+        // ==========================================
         // MODO LISTA: APENAS !aprenderjutsu
         // ==========================================
         if (args.length === 1) {
             const rankUsuario = dados.rank || 'Rank E';
-            const elementosUsuario = [];
+            const categoriasUsuario = [];
 
-            // Verifica quais cargos de elemento o jogador tem
+            // Verifica cargos de elemento
             for (const [chaveLimpa, idCargo] of Object.entries(config.cargosOrganizados.elementos)) {
                 if (message.member.roles.cache.has(idCargo)) {
                     let nomeElemento = '';
@@ -33,39 +42,37 @@ module.exports = {
                     else if (chaveLimpa.toLowerCase().includes('doton')) nomeElemento = 'doton';
                     else if (chaveLimpa.toLowerCase().includes('raiton')) nomeElemento = 'raiton';
 
-                    if (nomeElemento) elementosUsuario.push(nomeElemento);
+                    if (nomeElemento) categoriasUsuario.push(nomeElemento);
                 }
             }
 
-            if (elementosUsuario.length === 0) {
-                return message.reply('❌ Você não tem nenhum elemento para aprender jutsus ainda.');
+            if (categoriasUsuario.length === 0) {
+                return message.reply('❌ Você não tem nenhum elemento ou permissão para aprender jutsus ainda.');
             }
 
             const painelLista = new EmbedBuilder()
                 .setColor('#2F3136')
                 .setTitle(`📜 Jutsus Disponíveis - Nível: ${rankUsuario}`)
-                .setDescription('Use o comando `!aprenderjutsu <elemento> <nome_curto>` para treinar a técnica que escolher.')
+                .setDescription('Use o comando `!aprenderjutsu <elemento/categoria> <nome_curto>` para treinar a técnica que escolher.')
                 .setFooter({ text: 'Apenas jutsus do seu rank e elementos aparecem aqui.' });
 
             let encontrouJutsu = false;
 
-            for (const elemento of elementosUsuario) {
-                const caminhoArquivo = `./jutsus/${elemento}.json`;
+            for (const categoria of categoriasUsuario) {
+                const caminhoArquivo = `./jutsus/${categoria}.json`;
                 if (!fs.existsSync(caminhoArquivo)) continue;
 
-                const dbElemento = JSON.parse(fs.readFileSync(caminhoArquivo, 'utf-8'));
+                const dbCategoria = JSON.parse(fs.readFileSync(caminhoArquivo, 'utf-8'));
                 let listaTexto = [];
 
-                for (const [nomeCurto, jutsu] of Object.entries(dbElemento)) {
-                    // Limpa a palavra "Rank" para comparar só a letra (ex: "E")
+                for (const [nomeCurto, jutsu] of Object.entries(dbCategoria)) {
                     const rankJutsuLimpo = jutsu.rank.replace('Rank', '').trim();
                     const rankUsuarioLimpo = rankUsuario.replace('Rank', '').trim();
 
                     if (rankJutsuLimpo === rankUsuarioLimpo) {
-                        // Confere se não aprendeu ainda
                         const jaAprendeu = dados.jutsusAprendidos && 
-                                           dados.jutsusAprendidos[elemento] && 
-                                           dados.jutsusAprendidos[elemento].includes(nomeCurto);
+                                           dados.jutsusAprendidos[categoria] && 
+                                           dados.jutsusAprendidos[categoria].includes(nomeCurto);
                         
                         if (!jaAprendeu) {
                             listaTexto.push(`**${jutsu.nome}** (\`${nomeCurto}\`) | Custo: 🌀 ${jutsu.custoChakra}`);
@@ -74,9 +81,9 @@ module.exports = {
                 }
 
                 if (listaTexto.length > 0) {
-                    const nomeHeader = config.nomesExibicao && config.nomesExibicao[elemento] 
-                        ? config.nomesExibicao[elemento] 
-                        : elemento.toUpperCase();
+                    const nomeHeader = config.nomesExibicao && config.nomesExibicao[categoria] 
+                        ? config.nomesExibicao[categoria] 
+                        : categoria.toUpperCase();
                         
                     painelLista.addFields({ name: nomeHeader, value: listaTexto.join('\n'), inline: false });
                     encontrouJutsu = true;
@@ -86,7 +93,7 @@ module.exports = {
             if (!encontrouJutsu) {
                 painelLista.addFields({ 
                     name: 'Tudo dominado!', 
-                    value: 'Você já aprendeu todos os jutsus do seu Rank para os seus elementos. Tente subir de Rank para liberar mais!' 
+                    value: 'Você já aprendeu todos os jutsus do seu Rank para as suas categorias. Tente subir de Rank para liberar mais!' 
                 });
             }
 
@@ -94,44 +101,46 @@ module.exports = {
         }
 
         // ==========================================
-        // MODO APRENDER: !aprenderjutsu <elemento> <jutsu>
+        // MODO APRENDER: !aprenderjutsu <categoria> <jutsu>
         // ==========================================
         if (args.length < 3) {
-            return message.reply('⚠️ Use: `!aprenderjutsu <elemento> <nome_curto>` ou digite apenas `!aprenderjutsu` para ver a lista.');
+            return message.reply('⚠️ Use: `!aprenderjutsu <elemento/categoria> <nome_curto>` ou digite apenas `!aprenderjutsu` para ver a lista.');
         }
 
-        const elementoDigitado = args[1].toLowerCase();
+        const categoriaDigitada = args[1].toLowerCase();
         const jutsuDigitado = args[2].toLowerCase();
 
-        // Pega o ID na gaveta correta de elementos do config
-        const chaveElemento = Object.keys(config.cargosOrganizados.elementos).find(k => k.toLowerCase().includes(elementoDigitado));
-        
-        if (!chaveElemento) {
-            return message.reply(`❌ O elemento **${elementoDigitado}** não existe nas configurações.`);
+        // Se não for Clã Lee aprendendo Taijutsu, verifica o cargo elemental
+        if (!(dados.cla === 'Clã Lee' && categoriaDigitada === 'taijutsu')) {
+            const chaveElemento = Object.keys(config.cargosOrganizados.elementos).find(k => k.toLowerCase().includes(categoriaDigitada));
+            
+            if (!chaveElemento && categoriaDigitada !== 'taijutsu') {
+                return message.reply(`❌ A categoria **${categoriaDigitada}** não existe nas configurações.`);
+            }
+            
+            if (chaveElemento) {
+                const idCargoNecessario = config.cargosOrganizados.elementos[chaveElemento];
+                const temCargo = message.member.roles.cache.has(idCargoNecessario);
+
+                if (!temCargo) {
+                    return message.reply(`❌ Você não tem a permissão ninja necessária! Precisa do cargo de **${categoriaDigitada.toUpperCase()}**.`);
+                }
+            }
         }
-        
-        const idCargoNecessario = config.cargosOrganizados.elementos[chaveElemento];
 
-        const temCargo = message.member.roles.cache.has(idCargoNecessario);
-
-        if (!temCargo) {
-            return message.reply(`❌ Você não tem a permissão ninja necessária! Precisa do cargo de **${elementoDigitado.toUpperCase()}**.`);
-        }
-
-        const caminhoArquivo = `./jutsus/${elementoDigitado}.json`;
+        const caminhoArquivo = `./jutsus/${categoriaDigitada}.json`;
 
         if (!fs.existsSync(caminhoArquivo)) {
-            return message.reply(`❌ O arquivo de banco de dados para **${elementoDigitado}** não foi encontrado.`);
+            return message.reply(`❌ O arquivo de banco de dados para **${categoriaDigitada}** não foi encontrado. Certifique-se de ter um arquivo json para ele.`);
         }
 
-        const dadosElemento = fs.readFileSync(caminhoArquivo, 'utf-8');
-        const listaJutsus = JSON.parse(dadosElemento);
+        const dadosCategoria = fs.readFileSync(caminhoArquivo, 'utf-8');
+        const listaJutsus = JSON.parse(dadosCategoria);
 
         if (!listaJutsus[jutsuDigitado]) {
-            return message.reply(`❌ O jutsu **${jutsuDigitado}** não existe na lista de ${elementoDigitado}.`);
+            return message.reply(`❌ O jutsu **${jutsuDigitado}** não existe na lista de ${categoriaDigitada}.`);
         }
 
-        // Trava para impedir aprendizado de jutsus de Rank maior
         const rankJutsu = listaJutsus[jutsuDigitado].rank.replace('Rank', '').trim();
         const rankUser = (dados.rank || 'Rank E').replace('Rank', '').trim();
         
@@ -139,15 +148,15 @@ module.exports = {
             return message.reply(`❌ Esse jutsu é Rank ${rankJutsu}, mas você é Rank ${rankUser}. Você só pode aprender jutsus do seu nível!`);
         }
 
-        if (!dados.jutsusAprendidos[elementoDigitado]) {
-            dados.jutsusAprendidos[elementoDigitado] = [];
+        if (!dados.jutsusAprendidos[categoriaDigitada]) {
+            dados.jutsusAprendidos[categoriaDigitada] = [];
         }
 
-        if (dados.jutsusAprendidos[elementoDigitado].includes(jutsuDigitado)) {
+        if (dados.jutsusAprendidos[categoriaDigitada].includes(jutsuDigitado)) {
             return message.reply('⚠️ Você já domina essa técnica!');
         }
 
-        dados.jutsusAprendidos[elementoDigitado].push(jutsuDigitado);
+        dados.jutsusAprendidos[categoriaDigitada].push(jutsuDigitado);
         banco.salvar(perfis);
 
         const nomeCompleto = listaJutsus[jutsuDigitado].nome;

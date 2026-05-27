@@ -1,0 +1,104 @@
+{
+  "forca": {
+    "categoria": "Atributos Físicos",
+    "nome": "Treinamento de Força Bruta",
+    "funcao": "Aumentar a Força física e impacto",
+    "recompensaDescricao": "+10 em Força",
+    "caracteres": 500,
+    "tempoRP": 4,
+    "tipoRecompensa": "atributo",
+    "alvo": "forca",
+    "valorRecompensa": 10,
+    "imagem": "https://i.pinimg.com/originals/72/21/84/7221845f4965f043c653ff6103a3e990.gif"
+  },
+  "agilidade": {
+    "categoria": "Atributos Físicos",
+    "nome": "Treinamento de Reflexos",
+    "funcao": "Aumentar a Agilidade de movimento",
+    "recompensaDescricao": "+10 em Agilidade",
+    "caracteres": 500,
+    "tempoRP": 4,
+    "tipoRecompensa": "atributo",
+    "alvo": "agilidade",
+    "valorRecompensa": 10,
+    "imagem": "https://i.pinimg.com/originals/72/21/84/7221845f4965f043c653ff6103a3e990.gif"
+  },
+  "defesa": {
+    "categoria": "Atributos Físicos",
+    "nome": "Treinamento de Resistência",
+    "funcao": "Aumentar a Defesa contra impactos",
+    "recompensaDescricao": "+10 em Defesa",
+    "caracteres": 500,
+    "tempoRP": 4,
+    "tipoRecompensa": "atributo",
+    "alvo": "defesa",
+    "valorRecompensa": 10,
+    "imagem": "https://i.pinimg.com/originals/72/21/84/7221845f4965f043c653ff6103a3e990.gif"
+  },
+  "vida": {
+    "categoria": "Reservas de Energia",
+    "nome": "Treinamento de Vigor",
+    "funcao": "Aumentar a reserva de Vida Máxima",
+    "recompensaDescricao": "+100 de Vida",
+    "caracteres": 600,
+    "tempoRP": 6,
+    "tipoRecompensa": "atributo",
+    "alvo": "vidaMaxima",
+    "valorRecompensa": 100,
+    "imagem": "https://i.pinimg.com/originals/72/21/84/7221845f4965f043c653ff6103a3e990.gif"
+  },
+  "chakra": {
+    "categoria": "Reservas de Energia",
+    "nome": "Controle de Fluxo",
+    "funcao": "Expandir a reserva de Chakra Máxima",
+    "recompensaDescricao": "+100 de Chakra",
+    "caracteres": 600,
+    "tempoRP": 6,
+    "tipoRecompensa": "atributo",
+    "alvo": "chakraMaxima",
+    "valorRecompensa": 100,
+    "imagem": "https://i.pinimg.com/originals/72/21/84/7221845f4965f043c653ff6103a3e990.gif"
+  },
+  "despertar": {
+    "categoria": "Habilidades Oculares",
+    "nome": "Despertar do Dōjutsu",
+    "funcao": "Despertar o poder ocular latente através de treino",
+    "recompensaDescricao": "Dōjutsu (Nível 1)",
+    "caracteres": 1000,
+    "tempoRP": 10,
+    "tipoRecompensa": "dojutsu_despertar",
+    "imagem": "https://i.pinimg.com/originals/72/21/84/7221845f4965f043c653ff6103a3e990.gif"
+  },
+  "evoluir_olho": {
+    "categoria": "Habilidades Oculares",
+    "nome": "Evolução do Dōjutsu",
+    "funcao": "Aprimorar o uso do seu olho especial",
+    "recompensaDescricao": "Próximo Nível / Tomoe",
+    "caracteres": 1200,
+    "tempoRP": 12,
+    "tipoRecompensa": "dojutsu_evoluir",
+    "imagem": "https://i.pinimg.com/originals/72/21/84/7221845f4965f043c653ff6103a3e990.gif"
+  },
+  "maestria_ninjutsu": {
+    "categoria": "Maestrias e Estilos",
+    "nome": "Prática de Ninjutsu",
+    "funcao": "Aumentar o nível de domínio em Ninjutsu",
+    "recompensaDescricao": "+1 Nível em Ninjutsu",
+    "caracteres": 800,
+    "tempoRP": 8,
+    "tipoRecompensa": "maestria",
+    "alvo": "ninjutsu",
+    "valorRecompensa": 1,
+    "imagem": "https://i.pinimg.com/originals/72/21/84/7221845f4965f043c653ff6103a3e990.gif"
+  },
+  "jutsu": {
+    "categoria": "Técnicas Ninjas",
+    "nome": "Desenvolver Jutsu",
+    "funcao": "Aprender e masterizar uma técnica nova",
+    "recompensaDescricao": "Jutsu Salvo na Ficha",
+    "caracteres": 1000,
+    "tempoRP": 8,
+    "tipoRecompensa": "jutsu",
+    "imagem": "https://i.pinimg.com/originals/72/21/84/7221845f4965f043c653ff6103a3e990.gif"
+  }
+}

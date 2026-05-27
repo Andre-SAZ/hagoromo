@@ -41,14 +41,15 @@ client.once(Events.ClientReady, (readyClient) => {
     console.log(`🍃 Sucesso! O bot ${readyClient.user.tag} está online e protegendo a vila!`);
 });
 
-// Evento: Alguém enviou uma mensagem
-client.on(Events.MessageCreate, (message) => {
+// ==========================================
+// EVENTO: ALGUÉM ENVIOU UMA MENSAGEM
+// ==========================================
+client.on(Events.MessageCreate, async (message) => {
     
     // Ignora outros bots
     if (message.author.bot) return;
 
     // Pega a primeira palavra do texto para saber qual é o comando
-    // O split(/ +/) separa o texto por espaços
     const args = message.content.trim().split(/ +/);
     const nomeComando = args[0].toLowerCase();
 
@@ -58,12 +59,12 @@ client.on(Events.MessageCreate, (message) => {
     // Se a palavra não for um comando nosso, o bot ignora e não faz nada
     if (!comando) return;
 
-    // Tenta rodar o comando
+    // Tenta rodar o comando (AGORA COM AWAIT PARA COMANDOS ASSÍNCRONOS)
     try {
-        comando.executar(message);
+        await comando.executar(message);
     } catch (erro) {
-        console.error(erro);
-        message.reply('Ocorreu um erro ao executar este comando.');
+        console.error('[ERRO CRÍTICO NO COMANDO]:', erro);
+        message.reply('❌ Ocorreu um erro fatal ao executar este comando.');
     }
 });
 

@@ -1,0 +1,170 @@
+{
+  "Clã Uchiha": {
+    "nome": "Clã Uchiha",
+    "descricao": "Os Uchiha foram um dos quatro clãs nobres de Konohagakure, reconhecidos mundialmente como o clã mais poderoso da vila devido ao seu poderoso chakra e seu Dōjutsu único, o Sharingan.",
+    "thumbnail": "https://i.pinimg.com/736x/f7/6e/39/f76e3994ea474302cbdf53c474322477.jpg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/d/d3/Cl%C3%A3_Uchiha_%28Membros%29.png/revision/latest/scale-to-width-down/1000?cb=20150107110433&path-prefix=pt-br",
+    "vantagensDescricao": "🔥 Sharingan, Katon garantido, chance de ter um 2º elemento e maior chance de ser Prodígio."
+  },
+  "Clã Uzumaki": {
+    "nome": "Clã Uzumaki",
+    "descricao": "Originários de Uzushiogakure, os Uzumaki eram parentes distantes dos Senju. Eles são famosos por seu fôlego incrível, força vital absurda e imensa reserva de chakra.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/8/86/S%C3%ADmbolo_Uzumaki.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/b/b4/L%C3%ADder_do_Cl%C3%A3_Uzumaki_fazendo_os_selos.png/revision/latest/scale-to-width-down/1000?cb=20141028030657&path-prefix=pt-br",
+    "vantagensDescricao": "🌀 50% de Vida a mais e o dobro de Chakra inicial."
+  },
+  "Clã Hyuuga": {
+    "nome": "Clã Hyuuga",
+    "descricao": "Um dos quatro clãs nobres de Konohagakure. Todos os membros nascem com o Byakugan, que lhes concede uma visão estendida de 360 graus e a capacidade de ver a rede de chakra.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/9/91/S%C3%ADmbolo_Hy%C5%ABga.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/b/b5/Fam%C3%ADlia_Prim%C3%A1ria.png/revision/latest?cb=20140722004900&path-prefix=pt-br",
+    "vantagensDescricao": "👁️ Byakugan, Estilo Jūken (Punho Suave) e sem foco elemental inicial."
+  },
+  "Clã Senju": {
+    "nome": "Clã Senju",
+    "descricao": "O clã que fundou Konohagakure ao lado dos Uchiha. Descendentes de Asura Ōtsutsuki, eles eram conhecidos como o 'clã com mil habilidades', dominando todas as artes ninjas.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/e/e4/S%C3%ADmbolo_Senju.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/d/d8/Cl%C3%A3_Senju_%28Membros%29.png/revision/latest/scale-to-width-down/1000?cb=20150107110644&path-prefix=pt-br",
+    "vantagensDescricao": "🌳 Caminhos variados focados em Taijutsu bruto, Ninjutsu avançado ou Liberação de Madeira (Mokuton)."
+  },
+  "Clã Nara": {
+    "nome": "Clã Nara",
+    "descricao": "Conhecidos por sua inteligência excepcional e por cuidarem de veados, o clã Nara possui a habilidade de manipular as sombras através do Yin puro.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/b/bc/S%C3%ADmbolo_Nara.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/8/80/Kagemane_Cl%C3%A3_Nara.png/revision/latest/scale-to-width-down/1000?cb=20150704214032&path-prefix=pt-br",
+    "vantagensDescricao": "🌑 Especialistas na arte Hiden do Kage no Houjutsu (Controle das Sombras)."
+  },
+  "Clã Yamanaka": {
+    "nome": "Clã Yamanaka",
+    "descricao": "Um clã de Konohagakure especializado em técnicas de interceptação mental, comunicação telepática e controle da mente e do corpo do adversário.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/2/25/S%C3%ADmbolo_Yamanaka.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/3/3c/Cl%C3%A3_Yamanaka_%282%29.png/revision/latest?cb=20180515231645&path-prefix=pt-br",
+    "vantagensDescricao": "🧠 Especialistas na arte Hiden do Shintenshin no Jutsu (Transferência de Mente)."
+  },
+  "Clã Akimichi": {
+    "nome": "Clã Akimichi",
+    "descricao": "O clã Akimichi converte calorias em chakra, permitindo que utilizem técnicas de expansão corporal para se tornarem gigantes ou esferas de pura destruição.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/2/22/S%C3%ADmbolo_Akimichi.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/f/f1/Cl%C3%A3_Akimichi.PNG/revision/latest/scale-to-width-down/1000?cb=20181129155146&path-prefix=pt-br",
+    "vantagensDescricao": "🍱 Especialistas na arte Hiden do Karorī Kontorōru (Controle de Calorias)."
+  },
+  "Clã Aburame": {
+    "nome": "Clã Aburame",
+    "descricao": "No nascimento, os membros deste clã são oferecidos a insetos especiais que se alimentam do chakra do hospedeiro, servindo a eles como armas em combate.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/4/41/S%C3%ADmbolo_Aburame.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/4/49/Cl%C3%A3_Aburame.PNG/revision/latest?cb=20130226201856&path-prefix=pt-br",
+    "vantagensDescricao": "🪲 Especialistas na arte Hiden do Kikaichū no Jutsu (Controle de Insetos)."
+  },
+  "Clã Hatake": {
+    "nome": "Clã Hatake",
+    "descricao": "Um clã lendário e temido em Konoha. Ficaram infames através de figuras históricas como o 'Presa Branca' e o 'Ninja Copiador'.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/0/07/Simbolo_Hatake.png",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/f/fe/Kakashi_com_o_seu_pai.png/revision/latest/scale-to-width-down/1000?cb=20131120193041&path-prefix=pt-br",
+    "vantagensDescricao": "🐺 50% de chance de ser Prodígio e alta chance de ter dois elementos ao nascer."
+  },
+  "Clã Lee": {
+    "nome": "Clã Lee",
+    "descricao": "Ninjas excepcionais que sofrem de uma rara condição em sua rede de chakra, impedindo o uso de Ninjutsu e Genjutsu, mas dedicando suas vidas inteiramente à perfeição do corpo físico.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/6/66/S%C3%ADmbolo_Folha.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/7/73/Cl%C3%A3_Lee_-2-.png/revision/latest?cb=20180515230507&path-prefix=pt-br",
+    "vantagensDescricao": "🥋 Incapaz de usar Nin/Genjutsu. Ganha +3 Força/Agilidade e Maestria em Taijutsu inicial."
+  },
+  "Clã Sarutobi": {
+    "nome": "Clã Sarutobi",
+    "descricao": "Um clã influente que produziu membros notáveis de alto escalão. São famosos pela sua imensa força de vontade e devoção à 'Vontade do Fogo'.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/8/87/S%C3%ADmbolo_Sarutobi.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/5/54/Membros_do_Cl%C3%A3_Sarutobi_na_Guerra.png/revision/latest?cb=20150829162816&path-prefix=pt-br",
+    "vantagensDescricao": "🐒 Alta chance de ganhar maestrias extras na criação e capacidade de aprender até 5 elementos diferentes."
+  },
+  "Clã Kazekage": {
+    "nome": "Clã Kazekage",
+    "descricao": "A linhagem que historicamente governa Sunagakure. Seus descendentes costumam herdar artes complexas, como o uso de Areia ou o devastador Magnetismo.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/9/91/S%C3%ADmbolo_Areia.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/4/42/Cl%C3%A3_Kazekage.png/revision/latest/scale-to-width-down/1000?cb=20160304000514&path-prefix=pt-br",
+    "vantagensDescricao": "🏜️ Caminhos focados em Fuuton Avançado, manipulação de Marionetes ou Liberação de Magnetismo."
+  },
+  "Clã Hoshigaki": {
+    "nome": "Clã Hoshigaki",
+    "descricao": "Um clã renegado de Kirigakure cujos membros possuem características semelhantes às de tubarões, como guelras e dentes afiados, além de um chakra colossal.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/f/fd/S%C3%ADmbolo_N%C3%A9voa.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/f/f2/Shizuma.png/revision/latest?cb=20171017053150&path-prefix=pt-br",
+    "vantagensDescricao": "🦈 Monstro Sem Cauda! Possui 4x mais Chakra inicial que a maioria dos ninjas."
+  },
+  "Clã Kaguya": {
+    "nome": "Clã Kaguya",
+    "descricao": "Um clã bárbaro e extinto de Kirigakure. Alguns de seus membros herdavam a Shikotsumyaku, permitindo-lhes manipular toda a estrutura óssea do próprio corpo como armas indestrutíveis.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/f/fd/S%C3%ADmbolo_N%C3%A9voa.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/d/d5/Membros_do_Cl%C3%A3_Kaguya.png/revision/latest/scale-to-width-down/1000?cb=20150926015351&path-prefix=pt-br",
+    "vantagensDescricao": "🦴 Portadores da Kekkei Genkai Shikotsumyaku (Macabra Dança dos Ossos)."
+  },
+  "Clã Yuki": {
+    "nome": "Clã Yuki",
+    "descricao": "Um clã que sofreu grande perseguição na Névoa. Eles podiam combinar água e vento para criar o gelo, uma Kekkei Genkai temida por todos.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/f/fd/S%C3%ADmbolo_N%C3%A9voa.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/4/47/Cl%C3%A3_Yuki.png/revision/latest?cb=20180515233328&path-prefix=pt-br",
+    "vantagensDescricao": "❄️ Elementos Água e Vento simultâneos e Kekkei Genkai do Estilo Gelo garantidos."
+  },
+  "Clã Chinoike": {
+    "nome": "Clã Chinoike",
+    "descricao": "O clã Chinoike operou no País do Relâmpago e era temido por sua habilidade inata de controlar sangue e ferro através do seu dōjutsu exclusivo.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/1/1b/Simbolo_Chinoike.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/3/33/Cl%C3%A3_Chinoike.PNG/revision/latest/scale-to-width-down/1000?cb=20161215142254&path-prefix=pt-br",
+    "vantagensDescricao": "🩸 Possuem o poderoso Dōjutsu Ketsuryūgan para manipulação sanguínea."
+  },
+  "Clã Hoozuki": {
+    "nome": "Clã Hoozuki",
+    "descricao": "Habitantes lendários da Névoa Sangrenta, seus membros possuem a bizarra capacidade de transformar seus corpos inteiramente em água, ignorando danos físicos.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/f/fd/S%C3%ADmbolo_N%C3%A9voa.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/3/3e/Mangetsu_Suika.png/revision/latest/scale-to-width-down/1000?cb=20120607211947&path-prefix=pt-br",
+    "vantagensDescricao": "💧 Suiton garantido e acesso imediato ao Suika no Jutsu (Técnica de Liquefação)."
+  },
+  "Clã Raikage": {
+    "nome": "Clã Raikage",
+    "descricao": "A elite governante de Kumogakure. Ninjas deste grupo são ensinados desde cedo a forjar seus corpos e chakra em pura eletricidade para combate corporal absoluto.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/3/30/S%C3%ADmbolo_Nuvem.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/f/ff/Cl%C3%A3_dos_Raikage.png/revision/latest/scale-to-width-down/1000?cb=20221214124432&path-prefix=pt-br",
+    "vantagensDescricao": "⚡ Raiton garantido e acesso a jutsus exclusivos de armadura e modo de chakra de raio."
+  },
+  "Clã Juugo": {
+    "nome": "Clã Juugo",
+    "descricao": "Um clã misterioso cujos corpos podem absorver passivamente a energia natural do ambiente. Essa absorção constante causa surtos de fúria e mutações monstruosas.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/3/3b/Selo_Amaldi%C3%A7oado_S%C3%ADmbolo.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/8/8a/Jugo_no_Ichizoku.png/revision/latest/scale-to-width-down/1000?cb=20131010171930&path-prefix=pt-br",
+    "vantagensDescricao": "💪 Modificação natural da Senjutsu: +5 de Força, +25 de Vida e +50 de Chakra adicionais."
+  },
+  "Família dos B": {
+    "nome": "Família dos B",
+    "descricao": "Parceiros diretos do Raikage. Usam estilos de luta não convencionais e acrobáticos, confundindo a leitura de Sharingan e especialistas em taijutsu puro.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/3/30/S%C3%ADmbolo_Nuvem.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/c/ca/Killer_B_no_pesco%C3%A7o_do_Fukai.png/revision/latest/scale-to-width-down/1000?cb=20221125033830&path-prefix=pt-br",
+    "vantagensDescricao": "⚔️ Estilo de luta acrobata, Raio garantido e maestrias de Taijutsu/Kenjutsu no nascimento."
+  },
+  "Clã Inuzuka": {
+    "nome": "Clã Inuzuka",
+    "descricao": "Reconhecidos por seu uso de ninken (cães ninjas) como companheiros de combate. Eles utilizam jutsus de colaboração e seus próprios sentidos aguçados e bestiais.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/a/ab/S%C3%ADmbolo_Inuzuka.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/0/03/Cl%C3%A3_Inuzuka.PNG/revision/latest?cb=20130116181119&path-prefix=pt-br",
+    "vantagensDescricao": "🐾 Acesso aos Ninpō bestiais e a um Ninken (Cão Ninja) como companheiro de batalha."
+  },
+  "Linhagem de Guardiões": {
+    "nome": "Linhagem de Guardiões",
+    "descricao": "Protetores silenciosos e carcereiros que guardam prisioneiros de alto risco. O domínio do Fogo dessa linhagem visa o aprisionamento e a restrição de chakra inimigo.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/b/b3/S%C3%ADmbolo_Grama.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/d/d6/Muku_crian%C3%A7a_e_Mei.PNG/revision/latest?cb=20150705212453&path-prefix=pt-br",
+    "vantagensDescricao": "⛓️ Acesso exclusivo ao poderoso e punitivo jutsu Katon: Tenrou (Prisão Celestial)."
+  },
+  "Clã Izuno": {
+    "nome": "Clã Izuno",
+    "descricao": "Um pequeno clã conhecido por suas habilidades furtivas, grande afinidade com gatos e reflexos que imitam as capacidades felinas de silêncio absoluto e quedas suaves.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/6/66/S%C3%ADmbolo_Folha.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/c/c3/Cl%C3%A3_Izuno.png/revision/latest/scale-to-width-down/1000?cb=20211114204823&path-prefix=pt-br",
+    "vantagensDescricao": "🐈 Especialistas no Hiden Ninpou: Nekokaburi (Manto do Gato)."
+  },
+  "Clã Shimura": {
+    "nome": "Clã Shimura",
+    "descricao": "Um antigo clã guerreiro de Konoha que preza a disciplina e o pragmatismo em batalha. Membros notórios incluem Danzō Shimura, que personificou as raízes ocultas da vila.",
+    "thumbnail": "https://static.wikia.nocookie.net/naruto/images/6/66/S%C3%ADmbolo_Folha.svg",
+    "imagem": "https://static.wikia.nocookie.net/naruto/images/0/08/Danzo_Shimura.png/revision/latest?cb=20130505010755&path-prefix=pt-br",
+    "vantagensDescricao": "🌪️ Disciplina estrita: Ninjas focados, muitas vezes com afinidade superior à Liberação de Vento."
+  }
+}

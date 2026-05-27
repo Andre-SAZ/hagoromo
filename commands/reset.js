@@ -1,50 +1,76 @@
+const fs = require('fs');
 const banco = require('../banco.js');
-const config = require('../config.json');
 
 module.exports = {
     nome: '!reset',
 
     async executar(message) {
         const args = message.content.trim().split(/ +/);
-
-        // Trava de segurança contra acidentes
-        if (args[1] !== 'confirmar') {
-            return message.reply('⚠️ **Cuidado!** Isso vai apagar sua ficha inteira, seus jutsus e seus status para sempre.\nPara continuar, digite: `!reset confirmar`');
-        }
-
         const perfis = banco.ler();
         const idUsuario = message.author.id;
+        const dados = perfis[idUsuario];
 
-        // Verifica se a pessoa realmente tem uma ficha para apagar
-        if (!perfis[idUsuario]) {
-            return message.reply('❌ Você não tem nenhuma ficha criada para resetar.');
+        if (!dados) {
+            return message.reply('❌ Você não tem um perfil ativo para resetar.');
         }
 
-        // --------------------------------------------------
-        // PASSO 1: APAGAR OS DADOS DO ARQUIVO
-        // --------------------------------------------------
-        delete perfis[idUsuario];
-        banco.salvar(perfis);
+        if (args[1] !== 'confirmar') {
+            return message.reply('⚠️ **Atenção!** Isso vai apagar sua ficha, jutsus, ryōs e **remover todos os seus cargos ninjas**. Se tem certeza absoluta, digite: `!reset confirmar`');
+        }
 
-        // --------------------------------------------------
-        // PASSO 2: REMOVER OS CARGOS DO DISCORD
-        // --------------------------------------------------
+        await message.reply('🔄 Iniciando o reset completo da sua conta... Limpando histórico e removendo cargos.');
+
         try {
-            // Pega todos os IDs de cargos mapeados no config.json
-            const idsCargos = Object.values(config.cargos);
+            let cargosParaRemover = [];
 
-            // Filtra apenas os cargos que o jogador possui atualmente
-            const cargosParaRemover = message.member.roles.cache.filter(cargo => idsCargos.includes(cargo.id));
+            // Camada 1: Lendo o config.json direto do arquivo (ignora o cache do require)
+            const caminhoConfig = './config.json';
+            if (fs.existsSync(caminhoConfig)) {
+                const config = JSON.parse(fs.readFileSync(caminhoConfig, 'utf-8'));
+                const gavetas = config.cargosOrganizados || {};
 
-            // Remove todos de uma vez
-            if (cargosParaRemover.size > 0) {
+                for (const categoria in gavetas) {
+                    for (const chave in gavetas[categoria]) {
+                        const idCargo = gavetas[categoria][chave];
+                        if (message.member.roles.cache.has(idCargo)) {
+                            cargosParaRemover.push(idCargo);
+                        }
+                    }
+                }
+            }
+
+            // Camada 2: Busca direta pelo nome do clã salvo na ficha do jogador
+            if (dados.cla) {
+                const cargoClaPorNome = message.guild.roles.cache.find(r => r.name.toLowerCase() === dados.cla.toLowerCase());
+                if (cargoClaPorNome && !cargosParaRemover.includes(cargoClaPorNome.id)) {
+                    cargosParaRemover.push(cargoClaPorNome.id);
+                }
+            }
+
+            // Camada 3: Varredura de segurança nos cargos atuais do membro por palavras-chave
+            message.member.roles.cache.forEach(cargo => {
+                const nome = cargo.name;
+                if (nome.includes('Clã') || nome.includes('Família') || nome.includes('Linhagem')) {
+                    if (!cargosParaRemover.includes(cargo.id)) {
+                        cargosParaRemover.push(cargo.id);
+                    }
+                }
+            });
+
+            // Remove todos os cargos encontrados de uma vez só
+            if (cargosParaRemover.length > 0) {
                 await message.member.roles.remove(cargosParaRemover);
             }
-        } catch (erro) {
-            console.log('Erro ao remover os cargos no reset:', erro);
-            message.channel.send('⚠️ Os dados foram apagados, mas houve um erro ao tirar seus cargos automaticamente. Peça para um administrador remover manualmente.');
-        }
 
-        message.reply('✅ Sua ficha foi apagada com sucesso! Todos os seus dados e cargos ninja foram removidos. Você pode começar uma nova jornada usando o comando `!novo`.');
+            // Apaga a ficha do banco de dados apenas após usar as informações necessárias
+            delete perfis[idUsuario];
+            banco.salvar(perfis);
+
+            message.channel.send('✅ **Reset total concluído!** Sua ficha foi eliminada e todos os seus cargos (incluindo o de Clã) foram completamente removidos do seu utilizador.');
+
+        } catch (erro) {
+            console.error('Erro durante o reset:', erro);
+            message.channel.send('⚠️ A sua ficha foi apagada, mas ocorreu uma falha ao tentar remover todos os cargos do Discord automaticamente.');
+        }
     }
 };
