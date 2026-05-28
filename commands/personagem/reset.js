@@ -1,18 +1,86 @@
 const fs = require('fs');
 const { PermissionsBitField, EmbedBuilder } = require('discord.js');
-const banco = require('../../banco.js');
+const banco = require('../../banco.js'); 
 
 module.exports = {
     nome: '!reset',
 
     async executar(message) {
+        const args = message.content.trim().split(/ +/);
+
+        // ==========================================
+        // MODO 1: RESET GLOBAL (!reset all)
+        // ==========================================
+        if (args[1] === 'all') {
+            // Trava de segurança: Apenas Administradores podem zerar o servidor
+            if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) {
+                return message.reply('❌ Apenas Administradores podem dar um reset global no servidor.');
+            }
+
+            if (args[2] !== 'confirmar') {
+                return message.reply('⚠️ **ALERTA DE RESET GLOBAL!** Isso vai apagar as fichas de **TODOS OS JOGADORES** e retirar os cargos RPG de **TODO MUNDO**. A estrutura do servidor (os cargos em si) será mantida intacta. Para prosseguir, digite: `!reset all confirmar`');
+            }
+
+            const msgAviso = await message.reply('🔄 **Iniciando a Nova Temporada...** Removendo os cargos ninjas de todos os jogadores (isso pode levar alguns segundos dependendo do tamanho do servidor).');
+
+            // 1. Identificar todos os IDs dos cargos RPG olhando o config.json
+            let cargosRPG = new Set();
+            const caminhoConfig = './config.json';
+            
+            if (fs.existsSync(caminhoConfig)) {
+                const config = JSON.parse(fs.readFileSync(caminhoConfig, 'utf-8'));
+                const gavetas = config.cargosOrganizados || {};
+                for (const categoria in gavetas) {
+                    for (const chave in gavetas[categoria]) {
+                        cargosRPG.add(gavetas[categoria][chave]);
+                    }
+                }
+            }
+
+            // Garante que cargos de clãs e famílias também entrem na lista de remoção
+            await message.guild.roles.fetch();
+            message.guild.roles.cache.forEach(cargo => {
+                const nome = cargo.name;
+                if (nome.includes('Clã') || nome.includes('Família') || nome.includes('Linhagem')) {
+                    cargosRPG.add(cargo.id);
+                }
+            });
+
+            const arrayCargosRPG = Array.from(cargosRPG);
+
+            // 2. Tirar esses cargos de todos os membros do servidor (ignora bots)
+            const membros = await message.guild.members.fetch();
+            let membrosAfetados = 0;
+
+            for (const [idMembro, membro] of membros) {
+                if (membro.user.bot) continue;
+                
+                // Filtra os cargos que o jogador possui e que fazem parte do RPG
+                const cargosParaRemover = arrayCargosRPG.filter(idCargo => membro.roles.cache.has(idCargo));
+                
+                if (cargosParaRemover.length > 0) {
+                    // Remove todos de uma vez. O catch garante que não trave se tiver problemas de hierarquia
+                    await membro.roles.remove(cargosParaRemover).catch(() => {});
+                    membrosAfetados++;
+                }
+            }
+
+            // 3. Esvaziar o banco de dados de perfis
+            banco.salvar({});
+
+            return msgAviso.edit(`✅ **Reset Global Concluído!**\n💀 O livro de registros (\`perfis.json\`) foi completamente apagado.\n🏷️ Cargos RPG foram removidos dos perfis de **${membrosAfetados}** membros.\nA estrutura do servidor foi mantida e a nova jornada já pode começar!`);
+        }
+
+        // ==========================================
+        // MODO 2: RESET INDIVIDUAL (!reset @alvo)
+        // ==========================================
         if (!message.member.permissions.has(PermissionsBitField.Flags.ManageRoles)) {
             return message.reply('❌ Apenas membros da Staff com permissão de Gerenciar Cargos podem usar este comando.');
         }
 
         const alvo = message.mentions.members.first();
         if (!alvo) {
-            return message.reply('⚠️ Você precisa marcar o jogador que deseja resetar. Ex: `!reset @fulano`');
+            return message.reply('⚠️ Você precisa marcar o jogador que deseja resetar ou usar o reset global. Ex: `!reset @fulano` ou `!reset all`');
         }
 
         const perfis = banco.ler();
@@ -25,10 +93,7 @@ module.exports = {
 
         await message.reply(`🔄 Iniciando o reset da conta de **${alvo.user.username}**... Enviando DM e removendo cargos.`);
 
-        // ==========================================
-        // PREPARAÇÃO DE DADOS PARA A DM (BACKUP)
-        // ==========================================
-        // 1. Filtrando Maestrias
+        // Preparação de dados para a DM (Backup)
         let textoMaestrias = [];
         const mapaNomesMaestrias = {
             ninjutsu: 'Ninjutsu', genjutsu: 'Genjutsu', taijutsu: 'Taijutsu', bunshinjutsu: 'Bunshinjutsu', 
@@ -49,12 +114,10 @@ module.exports = {
         }
         const stringMaestrias = textoMaestrias.length > 0 ? textoMaestrias.join('\n') : 'Nenhuma maestria upada.';
 
-        // 2. Filtrando Jutsus Aprendidos
         let textoJutsus = [];
         if (dados.jutsusAprendidos) {
             for (const [categoria, lista] of Object.entries(dados.jutsusAprendidos)) {
                 if (lista && lista.length > 0) {
-                    // Deixa a primeira letra maiúscula (ex: katon -> Katon)
                     const catFormatada = categoria.charAt(0).toUpperCase() + categoria.slice(1);
                     textoJutsus.push(`**${catFormatada}:** ${lista.join(', ')}`);
                 }
@@ -62,9 +125,7 @@ module.exports = {
         }
         const stringJutsus = textoJutsus.length > 0 ? textoJutsus.join('\n') : 'Nenhum jutsu aprendido.';
 
-        // ==========================================
-        // MONTAGEM DA DM
-        // ==========================================
+        // Montagem da DM
         const dataReset = new Date().toLocaleString('pt-BR');
 
         const embedDM = new EmbedBuilder()
@@ -90,9 +151,7 @@ module.exports = {
             message.channel.send(`⚠️ Não foi possível enviar a mensagem privada para **${alvo.user.username}** (ele pode estar com as DMs fechadas), mas o reset continuará.`);
         }
 
-        // ==========================================
-        // LIMPEZA DE CARGOS DO ALVO
-        // ==========================================
+        // Limpeza de cargos do Alvo
         let cargosParaRemover = [];
         const caminhoConfig = './config.json';
         
@@ -132,9 +191,7 @@ module.exports = {
             }
         }
 
-        // ==========================================
-        // APAGA DO BANCO DE DADOS
-        // ==========================================
+        // Apaga do banco de dados
         delete perfis[idUsuario];
         banco.salvar(perfis);
 
