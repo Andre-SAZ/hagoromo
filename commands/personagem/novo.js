@@ -29,7 +29,7 @@ module.exports = {
             const texto1 = resposta1.first().content.trim().split(' ');
 
             if (texto1.length < 2) return message.reply('⚠️ Formato incorreto. Cancele e tente `!novo` novamente.');
-            
+
             const nome = texto1[0];
             const idade = texto1[1];
 
@@ -49,7 +49,7 @@ module.exports = {
             const gerarEmbedCarrossel = (index) => {
                 const nomeCla = clasSorteados[index];
                 const info = dbClas[nomeCla];
-                
+
                 return new EmbedBuilder()
                     .setColor('#F1C40F')
                     .setTitle(`⛩️ Sorteio do Destino: Opção ${index + 1} de 5`)
@@ -74,11 +74,11 @@ module.exports = {
                     if (i.customId === 'anterior') {
                         indexAtual = indexAtual === 0 ? 4 : indexAtual - 1;
                         await i.update({ embeds: [gerarEmbedCarrossel(indexAtual)] });
-                    } 
+                    }
                     else if (i.customId === 'proximo') {
                         indexAtual = indexAtual === 4 ? 0 : indexAtual + 1;
                         await i.update({ embeds: [gerarEmbedCarrossel(indexAtual)] });
-                    } 
+                    }
                     else if (i.customId === 'confirmar') {
                         const escolha = clasSorteados[indexAtual];
                         await i.update({ embeds: [], components: [], content: `✅ Seu destino está selado! Você nasceu no **${escolha}**.` });
@@ -102,7 +102,7 @@ module.exports = {
 
             await message.channel.send({ embeds: [embedPasso3] });
             const respostaImagem = await message.channel.awaitMessages({ filter: filtro, ...opcoes });
-            
+
             const anexo = respostaImagem.first().attachments.first();
             const linkImagem = anexo ? anexo.url : respostaImagem.first().content.trim();
 
@@ -110,10 +110,10 @@ module.exports = {
             // LÓGICA DE ATRIBUTOS
             // ==========================================
             let vida = 100, chakra = 100, forca = 0, agilidade = 0, defesa = 0;
-            let isProdigio = Math.random() < (1 / 9); 
+            let isProdigio = Math.random() < (1 / 9);
             let doujutsu = 'Nenhum', kekkei = 'Nenhuma', hiden = 'Nenhum', estiloLuta = 'Básico';
             let elementosSorteados = [];
-            let maestriasIniciais = []; 
+            let maestriasIniciais = [];
             let vantagensExclusivas = [];
 
             const todosElementos = ['katon', 'suiton', 'fuuton', 'doton', 'raiton'];
@@ -178,19 +178,31 @@ module.exports = {
                 case 'Clã Sarutobi':
                     if (sortearChance(50)) maestriasIniciais.push('kenjutsu');
                     if (sortearChance(80)) maestriasIniciais.push('ninjutsu');
-                    elementosSorteados.push(sortearElementoUnico()); 
+                    elementosSorteados.push(sortearElementoUnico());
                     let chanceE = 100;
                     while (sortearChance(chanceE) && elementosSorteados.length < 5) {
                         const novoElem = sortearElementoUnico(elementosSorteados);
                         if (novoElem) elementosSorteados.push(novoElem);
-                        chanceE /= 2; 
+                        chanceE /= 2;
                     }
                     break;
                 case 'Clã Senju':
                     const rSenju = Math.random() * 100;
-                    if (rSenju < 50) { maestriasIniciais.push('taijutsu'); forca += 1; chakra += 30; }
-                    else if (rSenju < 90) { isProdigio = Math.random() < 0.5; maestriasIniciais.push('ninjutsu', 'fluxoDeChakra', 'kenjutsu'); }
-                    else { elementosSorteados.push('suiton', 'doton'); kekkei = 'Estilo Madeira'; }
+                    if (rSenju < 50) {
+                        maestriasIniciais.push('taijutsu');
+                        forca += 1;
+                        chakra += 30;
+                        elementosSorteados.push(sortearElementoUnico()); // Adiciona o elemento básico
+                    }
+                    else if (rSenju < 90) {
+                        isProdigio = Math.random() < 0.5;
+                        maestriasIniciais.push('ninjutsu', 'fluxoDeChakra', 'kenjutsu');
+                        elementosSorteados.push(sortearElementoUnico()); // Adiciona o elemento básico
+                    }
+                    else {
+                        elementosSorteados.push('suiton', 'doton');
+                        kekkei = 'Estilo Madeira';
+                    }
                     break;
                 case 'Clã Yuki':
                     elementosSorteados.push('suiton', 'fuuton'); kekkei = 'Estilo Gelo';
@@ -222,7 +234,7 @@ module.exports = {
             }
 
             if (doujutsu !== 'Nenhum') {
-                const doujutsuBase = doujutsu.split(' (')[0]; 
+                const doujutsuBase = doujutsu.split(' (')[0];
                 const chaveD = doujutsuBase.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/[^a-zA-Z0-9]/g, '');
                 if (config.cargosOrganizados.doujutsus && config.cargosOrganizados.doujutsus[chaveD]) {
                     cargosParaAdicionar.push(config.cargosOrganizados.doujutsus[chaveD]);
@@ -258,7 +270,7 @@ module.exports = {
             });
 
             if (cargosParaAdicionar.length > 0) {
-                await message.member.roles.add(cargosParaAdicionar).catch(() => {});
+                await message.member.roles.add(cargosParaAdicionar).catch(() => { });
             }
 
             // ==========================================
@@ -273,7 +285,7 @@ module.exports = {
             };
 
             perfis[message.author.id] = {
-                nome: nome, cla: claEscolhido, idade: idade, rank: 'Rank E', prodigio: isProdigio,
+                nome: nome, cla: claEscolhido, idade: idade, rank: 1, prodigio: isProdigio,
                 elementos: elementosSorteados, kekkei: kekkei, doujutsu: doujutsu, hiden: hiden, estiloLuta: estiloLuta,
                 vantagens: vantagensExclusivas, imagem: linkImagem, vidaAtual: vida, vidaMaxima: vida, chakraAtual: chakra, chakraMaxima: chakra,
                 ryos: 0, forca: forca, agilidade: agilidade, defesa: defesa, jutsusAprendidos: jutsusA, maestrias: maestriasFinal

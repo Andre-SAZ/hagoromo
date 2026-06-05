@@ -1,7 +1,7 @@
 {
   "moguragakure": {
     "nome": "Doton: Moguragakure no Jutsu (Técnica da Toupeira)",
-    "rank": "D",
+    "rank": 2,
     "dano": 10,
     "custoChakra": 10,
     "descricao": "Transforma a terra em areia fina, permitindo que o usuário cave e se mova rapidamente debaixo do solo.",
@@ -9,7 +9,7 @@
   },
   "doryuuhei": {
     "nome": "Doton: Doryūheki (Parede de Estilo Terra)",
-    "rank": "C",
+    "rank": 3,
     "dano": 25,
     "custoChakra": 20,
     "descricao": "O usuário cospe lama que instantaneamente se solidifica criando uma imensa parede de rocha para defesa e ataque.",
@@ -17,7 +17,7 @@
   },
   "doryuudan": {
     "nome": "Doton: Doryūdan (Projéteis do Dragão de Terra)",
-    "rank": "B",
+    "rank": 4,
     "dano": 60,
     "custoChakra": 40,
     "descricao": "Cria a cabeça de um dragão de lama que passa a disparar projéteis de pedra altamente compactados contra o oponente.",
@@ -25,7 +25,7 @@
   },
   "yominonuma": {
     "nome": "Doton: Yomi no Numa (Pântano do Submundo)",
-    "rank": "A",
+    "rank": 5,
     "dano": 95,
     "custoChakra": 75,
     "descricao": "Transforma uma grande área de solo sólido em um pântano de lama viscosa que prende, afunda e esmaga o alvo.",
@@ -33,7 +33,7 @@
   },
   "golem": {
     "nome": "Doton: Gōremu no Jutsu (Técnica do Golem)",
-    "rank": "S",
+    "rank": 6,
     "dano": 190,
     "custoChakra": 120,
     "descricao": "Expele uma criatura humanoide gigantesca feita de rocha pura e sólida, capaz de desferir socos devastadores.",

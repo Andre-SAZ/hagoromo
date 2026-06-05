@@ -1,7 +1,7 @@
 {
   "raikyuu": {
     "nome": "Raiton: Raikyū (Bola de Raio)",
-    "rank": "D",
+    "rank": 2,
     "dano": 15,
     "custoChakra": 10,
     "descricao": "Cria uma esfera de energia elétrica que é atirada no inimigo, causando choque e paralisia leve.",
@@ -9,7 +9,7 @@
   },
   "jibashi": {
     "nome": "Raiton: Jibashi (Assassinato Eletromagnético)",
-    "rank": "C",
+    "rank": 3,
     "dano": 30,
     "custoChakra": 20,
     "descricao": "Dispara ondas de eletricidade pelas mãos que podem viajar pelo solo ou pela água para atingir o alvo.",
@@ -17,7 +17,7 @@
   },
   "rairyudan": {
     "nome": "Raiton: Rairyūdan (Dragão de Raio)",
-    "rank": "B",
+    "rank": 4,
     "dano": 65,
     "custoChakra": 45,
     "descricao": "Cria um grande dragão feito inteiramente de eletricidade que persegue e morde o oponente.",
@@ -25,7 +25,7 @@
   },
   "chidori": {
     "nome": "Raiton: Chidori (Mil Pássaros)",
-    "rank": "A",
+    "rank": 5,
     "dano": 100,
     "custoChakra": 70,
     "descricao": "Concentra uma quantidade imensa de chakra de raio na mão, criando uma lâmina elétrica capaz de perfurar quase qualquer coisa.",
@@ -33,7 +33,7 @@
   },
   "kirin": {
     "nome": "Raiton: Kirin",
-    "rank": "S",
+    "rank": 6,
     "dano": 200,
     "custoChakra": 130,
     "descricao": "Puxa os raios naturais das nuvens para formar uma criatura mítica de eletricidade, caindo na velocidade da luz e destruindo a área inteira.",

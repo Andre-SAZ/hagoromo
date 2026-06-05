@@ -1,5 +1,6 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const banco = require('../../banco.js');
+const config = require('../../config.json'); // NOVO: Puxa o arquivo de configurações
 
 module.exports = {
     nome: '!status',
@@ -30,13 +31,17 @@ module.exports = {
                 ? dados.elementos.map(e => e.charAt(0).toUpperCase() + e.slice(1).toLowerCase()).join(', ') 
                 : 'Nenhum';
 
+            // NOVO: Traduz o rank numérico para texto usando o dicionário do config
+            const rankNumero = dados.rank || 1;
+            const rankTexto = config.nomesRanks[rankNumero] || 'Rank Desconhecido';
+
             return new EmbedBuilder()
                 .setColor('#F1C40F')
                 .setTitle(`🥷 Ficha Shinobi - ${dados.nome}`)
                 .setImage(dados.imagem || null)
                 .addFields(
                     { name: '⛩️ Clã', value: `${dados.cla}`, inline: true },
-                    { name: '📊 Rank', value: `\`${dados.rank || 'Rank E'}\``, inline: true },
+                    { name: '📊 Rank', value: `\`${rankTexto}\``, inline: true }, // NOVO: Usa a variável traduzida
                     { name: '🎂 Idade', value: `${dados.idade} anos`, inline: true },
                     { name: '🌟 Talento Inato', value: dados.prodigio ? 'Prodígio' : 'Comum', inline: true },
                     { name: '🥋 Estilo de Luta', value: `${dados.estiloLuta || 'Básico'}`, inline: true },

@@ -14,6 +14,14 @@
         "doton": "🪨 Doton",
         "raiton": "⚡ Raiton"
     },
+    "nomesRanks": {
+        "1": "Rank E",
+        "2": "Rank D",
+        "3": "Rank C",
+        "4": "Rank B",
+        "5": "Rank A",
+        "6": "Rank S"
+    },
     "cores": {
         "katon": "#FF0000",
         "suiton": "#00BFFF",

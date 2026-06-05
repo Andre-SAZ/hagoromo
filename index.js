@@ -3,7 +3,8 @@
 // ==========================================
 require('dotenv').config();
 const fs = require('fs'); // Ferramenta do Node para ler arquivos do computador
-const { Client, GatewayIntentBits, Events, Collection } = require('discord.js');
+const { Client, GatewayIntentBits, Events, Collection, EmbedBuilder } = require('discord.js');
+const banco = require('./banco.js'); // Necessário para checar a ficha nos golpes dinâmicos
 
 // ==========================================
 // CRIANDO O BOT E AS PERMISSÕES
@@ -41,6 +42,11 @@ for (const pasta of pastasComandos) {
 }
 
 // ==========================================
+// CRIADOR DE COMANDOS DINÂMICOS (TAIJUTSU)
+// ==========================================
+require('./gerenciadorTaijutsu.js')(client);
+
+// ==========================================
 // EVENTOS DO BOT
 // ==========================================
 
@@ -56,6 +62,9 @@ client.on(Events.MessageCreate, async (message) => {
     
     // Ignora outros bots
     if (message.author.bot) return;
+
+    // TRAVA DE SEGURANÇA: A mensagem TEM que começar com "!"
+    if (!message.content.startsWith('!')) return;
 
     // Pega a primeira palavra do texto para saber qual é o comando
     const args = message.content.trim().split(/ +/);

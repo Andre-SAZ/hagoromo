@@ -1,31 +1,31 @@
 {
   "goukakyuu": {
     "nome": "Katon: Gōkakyū no Jutsu",
-    "rank": "E",
+    "rank": 1,
     "dano": 30,
     "custoChakra": 15,
     "descricao": "O usuário amassa o chakra dentro do corpo, transformando-o em fogo, e o expulsa da boca como uma esfera massiva.",
     "imagem": "https://i.pinimg.com/736x/d6/66/a8/d666a846e58ec1b64694c2dd8874b342.jpg"
   },
-  "housenka": {
-    "nome": "Katon: Hōsenka no Jutsu",
-    "rank": "C",
-    "dano": 20,
-    "custoChakra": 10,
-    "descricao": "Dispara várias pequenas bolas de fogo em direções diferentes, ótimo para enganar o inimigo.",
-    "imagem": "https://i.pinimg.com/736x/1a/b7/19/1ab719a5af1f6387eacc5e8a26ae5a52.jpg"
-  },
   "endan": {
     "nome": "Katon: Endan",
-    "rank": "Rank D",
+    "rank": 2,
     "dano": 15,
     "custoChakra": 8,
     "descricao": "O usuário cospe um jato rápido e direto de fogo no inimigo. É uma técnica simples, rápida e ótima para ataques curtos.",
     "imagem": "https://static.wikia.nocookie.net/naruto/images/8/8d/Libera%C3%A7%C3%A3o_de_Fogo_-_Proj%C3%A9til_de_Chamas_%28Koji_-_Mang%C3%A1%29.png/revision/latest?cb=20200522185222&path-prefix=pt-br"
   },
+  "housenka": {
+    "nome": "Katon: Hōsenka no Jutsu",
+    "rank": 3,
+    "dano": 20,
+    "custoChakra": 10,
+    "descricao": "Dispara várias pequenas bolas de fogo em direções diferentes, ótimo para enganar o inimigo.",
+    "imagem": "https://i.pinimg.com/736x/1a/b7/19/1ab719a5af1f6387eacc5e8a26ae5a52.jpg"
+  },
   "ryuuka": {
     "nome": "Katon: Ryūka no Jutsu",
-    "rank": "Rank C",
+    "rank": 3,
     "dano": 35,
     "custoChakra": 20,
     "descricao": "O fogo é disparado em uma linha reta, geralmente viajando através de um fio para atingir o alvo de forma certeira.",
@@ -33,7 +33,7 @@
   },
   "haisekisho": {
     "nome": "Katon: Haisekishō",
-    "rank": "Rank B",
+    "rank": 4,
     "dano": 55,
     "custoChakra": 35,
     "descricao": "O usuário solta uma nuvem de cinzas e pólvora que cobre o inimigo. Depois, morde os dentes para criar uma faísca e explodir tudo.",
@@ -41,7 +41,7 @@
   },
   "goryuuka": {
     "nome": "Katon: Gōryūka no Jutsu",
-    "rank": "Rank B",
+    "rank": 4,
     "dano": 60,
     "custoChakra": 40,
     "descricao": "Cospe chamas gigantes no formato da cabeça de um dragão. O calor é tão forte que pode criar correntes de ar quente no céu.",
@@ -49,7 +49,7 @@
   },
   "gokamekkyaku": {
     "nome": "Katon: Gōka Mekkyaku",
-    "rank": "Rank A",
+    "rank": 5,
     "dano": 90,
     "custoChakra": 65,
     "descricao": "Cria uma parede gigante e destruidora de fogo, como um tsunami de chamas. É muito difícil de desviar ou defender sozinho.",

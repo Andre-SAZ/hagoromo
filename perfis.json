@@ -1,1 +1,57 @@
-{}
+{
+  "1001684152963317832": {
+    "nome": "Andre",
+    "cla": "Clã Sarutobi",
+    "idade": "13",
+    "rank": "Rank E",
+    "prodigio": false,
+    "elementos": [
+      "raiton",
+      "fuuton"
+    ],
+    "kekkei": "Nenhuma",
+    "doujutsu": "Nenhum",
+    "hiden": "Nenhum",
+    "estiloLuta": "Básico",
+    "vantagens": [],
+    "imagem": "https://cdn.discordapp.com/attachments/1512259872790417438/1512260134934413362/vergilTeen.jpg?ex=6a237180&is=6a222000&hm=51010299ce3514c50f14c4b053eeb4252662217ba9d68e4c0a20c02c80db24e3&",
+    "vidaAtual": 100,
+    "vidaMaxima": 100,
+    "chakraAtual": 100,
+    "chakraMaxima": 100,
+    "ryos": 0,
+    "forca": 0,
+    "agilidade": 0,
+    "defesa": 0,
+    "jutsusAprendidos": {
+      "katon": [],
+      "fuuton": [],
+      "doton": [],
+      "raiton": [],
+      "suiton": [],
+      "outros": []
+    },
+    "maestrias": {
+      "ninjutsu": 0,
+      "genjutsu": 0,
+      "taijutsu": 0,
+      "bunshinjutsu": 0,
+      "fluxoDeChakra": 0,
+      "fuuinjutsu": 0,
+      "hiden": 0,
+      "juinjutsu": 0,
+      "jujutsu": 0,
+      "kekkaijutsu": 0,
+      "kenjutsu": 0,
+      "kinjutsu": 0,
+      "konbijutsu": 0,
+      "kyuuinjutsu": 0,
+      "ninjutsuEspacoTempo": 0,
+      "ninjutsuMedico": 0,
+      "nintaijutsu": 0,
+      "senjutsu": 0,
+      "shurikenjutsu": 0,
+      "tenseijutsu": 0
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "combo1": {
+    "nome": "Combinação Básica (Combo 1)",
+    "dano": 15,
+    "custoChakra": 0,
+    "descricao": "avança rapidamente com uma sequência brutal de socos velozes contra o oponente!",
+    "imagem": "https://i.pinimg.com/originals/59/b2/4f/59b24ffd6ac6d965ff34d642944a72e5.gif"
+  },
+  "combo2": {
+    "nome": "Combinação Aérea (Combo 2)",
+    "dano": 20,
+    "custoChakra": 0,
+    "descricao": "executa uma pirueta ágil, finalizando com um chute devastador em forma de machado para esmagar a guarda do alvo!",
+    "imagem": "https://i.pinimg.com/originals/f8/c9/c0/f8c9c084ffd368639952b6c0d04a0011.gif"
+  }
+}
